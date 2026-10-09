@@ -1,0 +1,230 @@
+/* 1. Global reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f1f5f9;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+/* 2. Header */
+header {
+  background-color: #0f766e;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+header p {
+  margin: 0.5rem 0 0;
+}
+
+/* 3. Main content */
+main {
+  width: 100%;
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  background-color: white;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+section h2 {
+  margin-top: 0;
+  color: #0f766e;
+}
+
+/* 4. Form and search */
+#note-form {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 150px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.35rem;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font: inherit;
+  background-color: white;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #0f766e;
+  outline-offset: 1px;
+}
+
+#search-input {
+  margin-bottom: 1rem;
+}
+
+/* 5. Buttons */
+button {
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #0f766e;
+  color: white;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #115e59;
+}
+
+button:focus-visible {
+  outline: 3px solid #14b8a6;
+  outline-offset: 2px;
+}
+
+/* 6. Validation errors */
+#error-message {
+  color: #b91c1c;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+/* 7. Notes list and note cards */
+#notes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.note-card {
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-left: 5px solid #0f766e;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  overflow-wrap: anywhere;
+}
+
+.note-card p {
+  margin: 0.5rem 0;
+}
+
+.note-text {
+  white-space: pre-wrap;
+}
+
+.note-meta {
+  color: #64748b;
+  font-size: 0.85rem;
+}
+
+.category-label {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.category-personal {
+  border-left-color: #0d9488;
+}
+
+.category-personal .category-label {
+  background-color: #ccfbf1;
+  color: #115e59;
+}
+
+.category-work {
+  border-left-color: #991b1b;
+}
+
+.category-work .category-label {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.category-study {
+  border-left-color: #2563eb;
+}
+
+.category-study .category-label {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+
+.delete-button {
+  background-color: #b91c1c;
+  margin-top: 0.5rem;
+}
+
+.delete-button:hover {
+  background-color: #7f1d1d;
+}
+
+/* 8. Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+/* 9. Mobile layout */
+@media (max-width: 600px) {
+  main {
+    margin: 1rem auto;
+    padding: 0 0.75rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  #note-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-group {
+    width: 100%;
+  }
+
+  #note-form button {
+    width: 100%;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+}
